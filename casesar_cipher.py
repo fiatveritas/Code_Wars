@@ -42,4 +42,4 @@ print(encryptor(13, ''))
 print(encryptor(13, 'Caesar Cipher')) #'Pnrfne Pvcure'
 print(encryptor(-5, 'Hello World!')) #'Czggj Rjmgy!'
 #print(encryptor(27, 'Whoopi Goldberg') #'Xippqj Hpmecfsh'
-print(encryptor(39, "T")) #'G'
+#print(encryptor(39, "T")) #'G'
