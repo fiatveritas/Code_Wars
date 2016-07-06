@@ -29,13 +29,3 @@ def encryptor(key, message):
             	print message[n]
             n += 1
         return new_string.join(lister)
-    #print(message)
-    #print(new_string)
-    #return new_string
-
-#print(encryptor(13, ''))
-#print encryptor(13, 'Caesar Cipher') #'Pnrfne Pvcure'
-#print(encryptor(-5, 'Hello World!')) #'Czggj Rjmgy!'
-#print encryptor(27, 'Whoopi Goldberg') #'Xippqj Hpmecfsh'
-#print(encryptor(39, "T")) #'G
-#print('ABV'.isupper())
