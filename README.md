@@ -7,7 +7,7 @@ This script takes a key and shifts each
 letter in a message by the key. Positive
 key shifts letter to the right. Negative
 number shifts to the left. Shifts are 
-base on alphabetical order.
+based on alphabetical order.
 
 # Determinant of a n_by_n Matrix
 This script computes the determinant
