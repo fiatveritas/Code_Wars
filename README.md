@@ -14,6 +14,12 @@ This script computes the determinant
 of an n_by_n matrix. Expansion by 
 first row.
 
+#Pig Latin
+This script takes the first letter of
+a string, places that letter at the 
+end of the string, and adds 'ay'
+to the end of the string.
+
 # Sequential Numbers Currently coding
 This script defines a function that
 takes in a number and returns the 
