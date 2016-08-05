@@ -1,3 +1,4 @@
+!#/usr/bin/python2.7
 def next_bigger(n):
     for i in str(n):
     	print int(i)
