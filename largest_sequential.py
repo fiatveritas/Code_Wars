@@ -1,10 +1,9 @@
 #!/usr/bin/python2.7
 def next_bigger(n):
-    print n
+    print '*************', n
     number = [int(i) for i in str(n)]
     copy = number[:]
     index = len(copy) - 1
-    list_num = []
     while index >= 0:
         for i in range(len(copy) - 1, -1, -1):
             if index == i:
@@ -17,16 +16,25 @@ def next_bigger(n):
                 copy[index] = copy[i]
                 copy[i] = digit_holder
                 stringer = ''
-                for digit in copy:
+                holder = None
+                if index < i:
+                    holder = index
+                else:
+                    holder = i
+                print holder
+                another_copy = copy[holder+1:]
+                another_copy.sort()
+                for digit in copy[:holder+1]:
                     stringer += str(digit)
-                list_num.append(int(stringer))
-                index = 0
-                continue
+                for digit in another_copy:
+                    stringer += str(digit)
+                print '***', copy[:holder+1], '***', another_copy[holder:],
+                return(int(stringer))
         index -= 1
-    return min(list_num)
 
 print next_bigger(12) #21
 print next_bigger(513) #531
 print next_bigger(2017) #2071
 print next_bigger(414) #441
 print next_bigger(144) #414
+#print next_bigger(1234567980)
