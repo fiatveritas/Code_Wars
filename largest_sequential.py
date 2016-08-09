@@ -4,37 +4,37 @@ def next_bigger(n):
     number = [int(i) for i in str(n)]
     copy = number[:]
     index = len(copy) - 1
+    stringer = ''
     while index >= 0:
-        for i in range(len(copy) - 1, -1, -1):
-            if index == i:
-                continue
-            elif copy[index] == copy[i]:
-                continue
-            elif copy[index] > copy[i]:
-                digit_holder = None
-                digit_holder = copy[index]
-                copy[index] = copy[i]
-                copy[i] = digit_holder
-                stringer = ''
-                holder = None
-                if index < i:
-                    holder = index
-                else:
-                    holder = i
-                print holder
-                another_copy = copy[holder+1:]
-                another_copy.sort()
-                for digit in copy[:holder+1]:
-                    stringer += str(digit)
-                for digit in another_copy:
-                    stringer += str(digit)
-                print '***', copy[:holder+1], '***', another_copy[holder:],
-                return(int(stringer))
+        if copy[index - 1] < copy[index]:
+            place_holder = index - 1
+            antecedent_copy = copy[:place_holder + 1]
+            after_copy = copy[place_holder + 1:]
+            modified_copy = after_copy[:]
+            #print antecedent_copy, after_copy
+            modified_copy = after_copy[:]
+            after_copy.sort()
+            for i in after_copy:
+                if antecedent_copy[place_holder] < i:
+                    holder = None
+                    holder = antecedent_copy[place_holder]
+                    antecedent_copy[place_holder] = i
+                    modified_copy[modified_copy.index(i)] = holder
+                    break
+            modified_copy.sort()
+            for i in antecedent_copy:
+                stringer += str(i)
+            for i in modified_copy:
+                stringer += str(i)
+            #print antecedent_copy, modified_copy
+            #print place_holder
+            break
         index -= 1
+    return int(stringer)
 
 print next_bigger(12) #21
 print next_bigger(513) #531
 print next_bigger(2017) #2071
 print next_bigger(414) #441
 print next_bigger(144) #414
-#print next_bigger(1234567980)
+print next_bigger(1234567980)
