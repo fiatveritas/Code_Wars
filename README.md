@@ -20,7 +20,7 @@ a string, places that letter at the
 end of the string, and adds 'ay'
 to the end of the string.
 
-# Sequential Numbers Currently coding
+# Sequential Numbers
 This script defines a function that
 takes in a number and returns the 
 next number larger than the input
