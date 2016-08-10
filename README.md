@@ -26,3 +26,11 @@ takes in a number and returns the
 next number larger than the input
 based on the digits in the given 
 number.
+
+# Distance from Mean
+This script computes a
+list of deviations from
+the mean. Used numpy to
+solve this kata. Other
+users on Code Wars
+brute forced solution.
