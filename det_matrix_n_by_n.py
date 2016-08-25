@@ -1,4 +1,5 @@
 def determinant(matrix):
+    """This script computes the determinant of an n_by_n matrix. Expansion by first row."""
     if len(matrix) == 1:
         return matrix[0][0]
     elif len(matrix) == 2:
@@ -10,6 +11,8 @@ def determinant(matrix):
             sum += (-1) ** i * matrix[0][i] * determinant(minor_exp(i, matrix))
         return sum
 def minor_exp(column, matrix):
+    """This function computes the minor \
+    of a matrix."""
     i = 1
     new_matrix = []
     while i < len(matrix):
